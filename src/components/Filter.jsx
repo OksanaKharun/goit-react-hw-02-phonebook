@@ -1,7 +1,7 @@
 export default function Filter({filter, handleFilterChange }) {
   return (
     <div className="filter">
-      <label htmlFor="search">Find contacts by name</label>
+      <h3 htmlFor="search">Find contacts by name</h3>
       <input type="text" value={filter} onChange={handleFilterChange} />
     </div>
   );
