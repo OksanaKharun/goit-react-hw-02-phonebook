@@ -48,9 +48,9 @@ export class App extends Component {
     this.setState({ filter: evt.currentTarget.value });
   };
 
-  handleDelete = contacId => {
+  handleDelete = contactId => {
     this.setState(({ contacts }) => ({
-      contacts: contacts.filter(({ id }) => id !== contacId),
+      contacts: contacts.filter(({ id }) => id !== contactId),
     }));
   };
 
