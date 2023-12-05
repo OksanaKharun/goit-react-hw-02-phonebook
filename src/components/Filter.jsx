@@ -1,8 +1,17 @@
-export default function Filter({filter, handleFilterChange }) {
+
+export const Filter = ({ value, filterContacts }) => {
   return (
     <div className="filter">
-      <h3 htmlFor="search">Find contacts by name</h3>
-      <input type="text" value={filter} onChange={handleFilterChange} />
+      <label >
+        Find contacts by name
+        <input
+          
+          type="text"
+          name="filter"
+          value={value}
+          onChange={filterContacts}
+        />
+      </label>
     </div>
   );
-}
+};

@@ -2,17 +2,17 @@
 import React from 'react';
 
 
-const ContactList = ({ contacts, onDeleteContact }) => {
+export const ContactList = ({ contacts, handleDelete }) => {
   return (
     <ul className="contact-menu">
-      {contacts.map((contact) => (
-        <li className="contact-list" key={contact.id}>
-          {contact.name}: {contact.number}
-          <button className="delete-btn" onClick={() => onDeleteContact(contact.id)}>Delete</button>
+      {contacts.map(({ id, name, number }) => (
+        <li className="contact-list" key={id}>
+          {name}: {number}
+          <button className="delete-btn" onClick={() => handleDelete(id)} >
+            Delete
+          </button>
         </li>
       ))}
     </ul>
   );
 };
-
-export default ContactList;
